@@ -9,7 +9,7 @@ function Interpreter() {
 
 Interpreter.prototype.process = function(input_data) {
     if (input_data.match(/PLACE [0-4],[0-4],(NORTH|EAST|SOUTH|WEST)/g)) {
-        return [input_data[6], input_data[8], input_data.split(',').pop().slice(0, -1)]
+        return [parseInt(input_data[6]), parseInt(input_data[8]), input_data.split(',').pop().slice(0, -1)]
     } else if (input_data === 'MOVE\n') {
         return 'MOVE';
     } else if (input_data === 'LEFT\n') {
