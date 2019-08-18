@@ -8,7 +8,7 @@ function Interpreter() {
   }
 
 Interpreter.prototype.process = function(input_data) {
-    if (input_data.startsWith('PLACE')) {
+    if (input_data.match(/PLACE [0-4],[0-4],(NORTH|EAST|SOUTH|WEST)/g)) {
         console.log('This is a PLACE command');
     } else if (input_data === 'MOVE\n') {
         console.log('This is a MOVE command');
