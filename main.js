@@ -15,6 +15,7 @@ standard_input.on('data', function (data) {
         console.log('Simulation exiting');
         process.exit(0);
     } else {
-        interpreter.process(data);
+        result = interpreter.process(data);
+        console.log(result);
     }
 });
