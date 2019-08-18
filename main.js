@@ -1,11 +1,20 @@
+// Import all modules and make their objects accessible
 let interpreters = require('./interpreter.js');
 let Interpreter = interpreters.Interpreter;
-
+let simulators = require('./simulator.js');
+let Simulator = simulators.Simulator;
+let robots = require('./robot.js');
+let Robot = robots.Robot;
+let boards = require('./board.js');
+let Board = boards.Board;
 var standard_input = process.stdin;
 standard_input.setEncoding('utf-8');
 
 // Instantiate all objects required for the simulation
 let interpreter = new Interpreter;
+let simulator = new Simulator;
+let robot = new Robot;
+let board = new Board;
 
 console.log('Starting simulation');
 
@@ -15,7 +24,7 @@ standard_input.on('data', function (data) {
         console.log('Simulation exiting');
         process.exit(0);
     } else {
-        result = interpreter.process(data);
-        console.log(result);
+        command = interpreter.process(data);
+        simulator.run_command(command, robot, board);
     }
 });
