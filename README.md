@@ -17,10 +17,10 @@ The basic architecture is as follows:
     * Prevents a PLACE command from being issued that would place the robot out of the table bounds
 	* Processes the input and converts it into a format to send to the simulator
 * The simulator:
-	* Responsible for commanding the robot to perform various actions
+	* Is responsible for commanding the robot to perform various actions
 * The robot:
 	* Knows whether or not it is on the table
-	* Once on the table it knows its position in X and Y coordinates and the direction with which it is facing
+	* Once on the table it knows its position in X and Y coordinates and the direction in which it is facing
 	* Is able to move position and turn direction
 	* Is able to report its position and direction
     * Once placed on the table, is responsible for prevenitng itself from falling off
@@ -43,7 +43,7 @@ Then clone this repoistory:
 git clone https://github.com/mike1372/toy_robot_nodejs.git
 ```
 
-Running the simulation
+Running the Simulation
 ----------------------
 
 The simulation is run by issuing the folowing command:
@@ -70,6 +70,6 @@ Problems
 To Do
 -----
 
-* The robot does too much - perhaps add someting to handle the validation of movement, i.e. is it safe to move forward given a particular position and direction?
+* The robot does too much - perhaps add something to handle the validation of movement, i.e. is it safe to move forward given a particular position and direction?
 * The table is not used at all - the robot should reference it to see what the dimensions are.
 * Should not be relying on the robot REPORT command of the robot in the simulation test - this needs to be addressed.
