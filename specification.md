@@ -41,6 +41,7 @@ Output:
 
 0,1,NORTH
 
+
 Input:
 
 PLACE 0,0,NORTH
@@ -52,6 +53,7 @@ REPORT
 Output:
 
 0,0,WEST
+
 
 Input:
 
