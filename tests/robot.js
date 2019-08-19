@@ -19,10 +19,10 @@ describe('Robot', function() {
   });
 
   it('should report its position and direction', function() {
-    expect(robot.report()).to.equal('Robot not yet on the board');
+    expect(robot.report()).to.equal('Robot not yet on the table');
   });
 
-  it('should report its position and direction once placed on the board', function() {
+  it('should report its position and direction once placed on the table', function() {
     robot.place([0, 0, 'NORTH']);
     expect(robot.report()).to.equal('0,0,NORTH');
   });
@@ -33,7 +33,7 @@ describe('Robot', function() {
     expect(robot.report()).to.equal('1,1,SOUTH');
   });
 
-  it('should report its position and direction once placed on the board', function() {
+  it('should report its position and direction once placed on the table', function() {
     robot.place([0, 0, 'NORTH']);
     expect(robot.report()).to.equal('0,0,NORTH');
   });
@@ -110,25 +110,25 @@ describe('Robot', function() {
     expect(robot.report()).to.equal('1,2,WEST');
   });
 
-  it('should not move off the NORTH side of the board', function() {
+  it('should not move off the NORTH side of the table', function() {
     robot.place([2, 4, 'NORTH']);
     robot.move();
     expect(robot.report()).to.equal('2,4,NORTH');
   });
 
-  it('should not move off the EAST side of the board', function() {
+  it('should not move off the EAST side of the table', function() {
     robot.place([4, 2, 'EAST']);
     robot.move();
     expect(robot.report()).to.equal('4,2,EAST');
   });
 
-  it('should not move off the SOUTH side of the board', function() {
+  it('should not move off the SOUTH side of the table', function() {
     robot.place([2, 0, 'SOUTH']);
     robot.move();
     expect(robot.report()).to.equal('2,0,SOUTH');
   });
 
-  it('should not move off the WEST side of the board', function() {
+  it('should not move off the WEST side of the table', function() {
     robot.place([0, 2, 'WEST']);
     robot.move();
     expect(robot.report()).to.equal('0,2,WEST');
