@@ -6,7 +6,11 @@ let Board = boards.Board;
 describe('Board', function() {
   var board = new Board;
 
-  it('The size of the board should be 5 by 5', function() {
-    expect(board.size()).to.equal('This board is of length 5 and width 5');
+  it('length should be 5', function() {
+    expect(board.length).to.equal(5);
+  });
+
+  it('width should be 5', function() {
+    expect(board.width).to.equal(5);
   });
 });
