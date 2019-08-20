@@ -46,7 +46,7 @@ git clone https://github.com/mike1372/toy_robot_nodejs.git
 Running the Simulation
 ----------------------
 
-The simulation is run by issuing the folowing command:
+The simulation is run by issuing the following command:
 
 ```
 node lib/main.js
@@ -71,5 +71,5 @@ To Do
 -----
 
 * The robot does too much - perhaps add something to handle the validation of movement, i.e. is it safe to move forward given a particular position and direction?
-* The table is not used at all - the robot should reference it to see what the dimensions are.
+* The table is not used at all - the robot should reference it to see what the dimensions are for things such as ensuring that it does not fall off the table.
 * Should not be relying on the robot REPORT command of the robot in the simulation test - this needs to be addressed.
