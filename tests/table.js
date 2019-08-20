@@ -7,10 +7,10 @@ describe('Table', function() {
   var table = new Table;
 
   it('length should be 5', function() {
-    expect(table.length).to.equal(5);
+    expect(table.x_units).to.equal(5);
   });
 
   it('width should be 5', function() {
-    expect(table.width).to.equal(5);
+    expect(table.y_units).to.equal(5);
   });
 });
